@@ -29,6 +29,9 @@
 - `91-SLS-Validation-Scenarios.md`（验证准备）
   调用验证场景设计与观察点。
 
+- `92-SLS-Prompt-Profiles.md`（调用资产）
+  经过实测沉淀的可直接复用 prompt 模板。
+
 - `99-SLS-Changelog.md`
   规范演化与关键决策记录。
 
@@ -46,7 +49,8 @@
 5. `40-SLS-Narrative-Guide.md`
 6. `90-SLS-Prompt-Assembly.md`
 7. `91-SLS-Validation-Scenarios.md`
-8. `99-SLS-Changelog.md`
+8. `92-SLS-Prompt-Profiles.md`
+9. `99-SLS-Changelog.md`
 
 ---
 
