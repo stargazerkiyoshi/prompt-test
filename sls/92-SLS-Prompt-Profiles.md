@@ -10,6 +10,8 @@
 
 本文件不重新定义主规范，也不替代 `90-SLS-Prompt-Assembly.md` 的调用组织职责。
 
+后续若需判断应优先扩展哪些 profiles，可参考 `93-SLS-Usage-Scenario-Matrix.md` 的场景分类与优先级建议。
+
 ---
 
 ## 2. 使用说明

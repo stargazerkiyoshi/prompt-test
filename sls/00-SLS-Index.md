@@ -32,6 +32,9 @@
 - `92-SLS-Prompt-Profiles.md`（调用资产）
   经过实测沉淀的可直接复用 prompt 模板。
 
+- `93-SLS-Usage-Scenario-Matrix.md`（使用设计 / 调用设计）
+  SLS 使用场景分类、适配判断、是否先列大纲的矩阵说明。
+
 - `99-SLS-Changelog.md`
   规范演化与关键决策记录。
 
@@ -50,7 +53,8 @@
 6. `90-SLS-Prompt-Assembly.md`
 7. `91-SLS-Validation-Scenarios.md`
 8. `92-SLS-Prompt-Profiles.md`
-9. `99-SLS-Changelog.md`
+9. `93-SLS-Usage-Scenario-Matrix.md`
+10. `99-SLS-Changelog.md`
 
 ---
 
