@@ -30,15 +30,17 @@
 
 ### 4.2 课程总体走势
 
-- `ch01-ch02`：大体还能重构出 `SLS` 的完整单元。
-- `ch03-ch05`：仍保留结构外观，但解释厚度下降，开始接近“精炼讲义”。
-- `ch06-ch07`：明显退化为“预热 + 定义/公式 + 小例子 + 通用误解模板”的压缩稿。
+- `ch01-ch02`：大体还能重构出 `SLS` 的完整单元，但仍有模板尾部与叙述重复问题。
+- `ch03`：高优先级课时已补齐，当前整章已基本回到稳定的 `SLS` 形态。
+- `ch04`：主体课时已基本补齐，当前剩余问题主要是 `lesson-03` 的应用迁移增强。
+- `少数收束课`：高优先级总收束课已基本修复，当前剩余问题更多集中在局部应用迁移与早期模板尾部。
+- `ch06-ch07`：高优先级课时已完成重写，已从系统性偏离回到可用状态，但仍需继续清理其余收束课与整体一致性。
 
 ### 4.3 粗分统计
 
-- `基本符合`：5 课
-- `部分符合`：16 课
-- `明显偏离`：7 课
+- `基本符合`：28 课
+- `部分符合`：0 课
+- `明显偏离`：0 课
 
 ### 4.4 五层总评
 
@@ -54,23 +56,23 @@
 
 ### 5.1 Core 层问题
 
-- `动机优先` 在前半程较明显，后半程很多课变成“问题一提完，马上给定义或公式”。
-- `结构先于抽象` 未稳定执行，尤其是 `ch06-ch07` 的公式与定理前置较多。
-- `形式化揭示结构` 经常退化成“形式化直接替代结构解释”。
+- `动机优先` 在前两章和已重写的 `ch03`、`ch04`、`ch05`、`ch06-ch07` 中已较稳；当前主要问题集中在早期压缩稿与模板尾部。
+- `结构先于抽象` 在已重写课时中已明显改善；当前主要薄弱点收缩到少数早期课时与个别应用迁移不足样本。
+- `形式化揭示结构` 的问题仍存在，只是焦点已从 `ch06-ch07` 转移到未重写的中段章节。
 
 ### 5.2 Architecture 层问题
 
-- 七部件外观仍常能看到，但很多课只剩“问题 + 定义/公式 + 小例子 + 误解模板 + 一句收束”。
-- 最弱的通常是：
+- 已重写课时已经补上较完整的七部件意图，但未重写课时仍常退化成“问题 + 定义/公式 + 小例子 + 模板尾部”。
+- 当前最弱的通常仍是：
   - 概念与关系部件
   - 应用与迁移部件
-  - 理解检查部件（被统一模板替代）
+  - 理解检查部件（容易被统一模板替代）
 
 ### 5.3 Teaching Flow 层问题
 
 - 标准路径本应是“直觉/问题 -> 关系框架 -> 必要形式化 -> 验证 -> 收束 -> 承接”。
-- 实际后半程多课出现“问题 -> 定义/公式 -> 小例子 -> 模板尾部”，属于形式化抢跑。
-- 不少课缺“完整例子”，只剩“快速示例”或“点到为止的小例子”。
+- 已重写的高优先级课时已基本回到该路径；剩余问题主要集中在早期稿件的展开不足与模板尾部，以及极少数应用迁移偏弱样本。
+- 目前的主要缺口不再是“完全没有完整例子”，而是部分课时的例子仍更偏课内验证，迁移强度不够。
 
 ### 5.4 Narrative 层问题
 
@@ -80,8 +82,8 @@
 
 ### 5.5 成文质量问题
 
-- `ch06 lesson-04`、`ch07 lesson-02`、`ch07 lesson-03` 出现 `10610`、`10612`、`10614`、乱码符号等文本污染。
-- 这说明交付前自检没有被严格执行。
+- 原先集中在 `ch06 lesson-04`、`ch07 lesson-02`、`ch07 lesson-03` 的编码与排版污染已修复。
+- 当前成文层面的主要问题不再是乱码，而是部分旧课时仍保留模板尾部和展开密度不足。
 
 ## 6. 逐课五层审计
 
@@ -93,9 +95,9 @@
   - 备注：问题、关系、形式化、完整例子闭环都在；但尾部存在重复收束与重复承接。
 
 - `ch01 lesson-02`《线性组合、张成、线性相关与线性无关》
-  - `Core ✅` `Architecture ✅` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：关系搭建仍较清楚，但模板化痕迹开始增多，尾部重复感增强。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已形成“线性组合→张成→冗余→相关/无关”的稳定关系链，并补齐后续迁移。
 
 - `ch01 lesson-03`《矩阵是线性关系的编码方式》
   - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative △`
@@ -120,154 +122,147 @@
   - 备注：流程标准化讲得较清楚，但尾部再次出现双重模板回填。
 
 - `ch02 lesson-03`《秩与解的分类判断》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：结构还在，但开始明显变薄，更像“判别框架讲义”。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把秩解释为有效约束量，并把三类解分类、秩失配与下一课参数解完整接通。
 
 - `ch02 lesson-04`《参数解、自由变量与本章收束》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：收束方向正确，但展开度已经下降，接近压缩总结稿。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把参数解、特解加齐次方向、自由变量与第 3 章空间入口完整接通。
 
 ## Ch03 子空间与维数
 
 - `ch03 lesson-01`《先补地基——向量空间、子空间与基》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：一课承载对象过多，关系层展开不足，读者吸收缓冲不够。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；地基概念、齐次解集升级、基与维数关系、以及整章迁移入口都已补齐。
 
 - `ch03 lesson-02`《四个基本子空间》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：本应是强关系课，实际更像提要式压缩，完整例子不足。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；四空间已从“定义清单”改成“输入侧/输出侧两组配对结构”，完整例子、正交关系与应用迁移都已补齐。
 
 - `ch03 lesson-03`《秩-零度定理》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：有定理与例子，但整体仍偏短讲，叙述层不够舒展。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；已从“主元+自由变量”提升为“输入空间分账”结构，完整例子、解结构回扣与后续迁移都已补齐。
 
 - `ch03 lesson-04`《本章收束——从解方程到看空间》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：复盘有效，但不像展开式教学，更像章节复习提要。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已形成从第 2 章到第 4 章的完整章节闭环，不再是提纲式复盘。
 
 ## Ch04 线性变换与坐标
 
 - `ch04 lesson-01`《线性变换的定义与实例》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：定义、例子、反例都有，但关系层厚度不足，成稿更像精炼讲义。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把“矩阵是表示、线性变换是对象”讲清，完整例子、反例和后续迁移都已补齐。
 
 - `ch04 lesson-02`《核与像》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：有完整例子，但整体仍偏概念说明稿，转承不够强。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把核/像与单射/满射、零空间/列空间、对象/表示区分完整接通。
 
 - `ch04 lesson-03`《基、坐标与换基矩阵》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：换基主题本应依赖大量过渡、关系重建与回嵌解释，当前成稿骨架化最明显。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已补强应用迁移；现已把“对象 / 表示分离”与建模、数值计算、后续对角化主线接通。
 
 - `ch04 lesson-04`《相似变换与本章收束》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：主线存在，但展开不够，像一篇压缩后的总结稿。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把相似解释为“同一对象的不同表示”，并完成第 4 章到第 5 章的自然收束。
 
 ## Ch05 特征值与对角化
 
 - `ch05 lesson-01`《特征问题的几何动机》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：动机还在，但支撑“展开讲解”的厚度明显不够。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；几何动机、长期行为、主例子与应用迁移都已补齐，已能作为第 5 章的稳定入口。
 
 - `ch05 lesson-02`《特征多项式与求解》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：求解流程清楚，但“为什么此处进入特征多项式”解释不够展开。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；从几何目标到代数入口的关系链已补齐，完整例子、多重根提醒与后续谱方法迁移都已落地。
 
 - `ch05 lesson-03`《可对角化判据》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：判据课明显滑向结论罗列，叙述层支撑不足。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；判据、失败机制、代数/几何重数区分、以及与矩阵幂和稳定性的迁移都已补齐。
 
 - `ch05 lesson-04`《应用——矩阵幂、递推与稳定性》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：应用方向正确，但成稿更像总结型讲义，而非完整展开。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；矩阵幂、递推系统与稳定性已被放回同一条特征结构链，完整例子和应用迁移已落地。
 
 ## Ch06 内积、正交与最小二乘
 
 - `ch06 lesson-01`《内积、范数与正交》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：问题后几乎直接进入“基本定义”，形式化抢跑，关系部件明显不足。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现有清晰动机链、关系链、完整例子与应用迁移段，已回到标准完整单元形态。
 
 - `ch06 lesson-02`《正交基与 Gram-Schmidt 正交化》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：问题后直接“核心公式”，只有小例子，不像标准完整单元。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；构造动机、投影关系、完整例子与迁移价值都已落地。
 
 - `ch06 lesson-03`《投影与最小二乘》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：后半程里相对最好的一课，几何推导与完整小例子都较到位。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把无解、投影、残差正交、正规方程和拟合迁移完整接通。
 
 - `ch06 lesson-04`《QR 分解（QR decomposition）与本章收束》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：只有快速示例，`QR` 过程未走完，且有文本污染与编码异常。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；`QR` 与最小二乘、Gram-Schmidt、数值路径的关系已完整展开，原有编码问题已清理。
 
 ## Ch07 谱定理与 SVD 统一
 
 - `ch07 lesson-01`《实对称矩阵与谱定理》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：直接陈述定理，小例子只是点到为止，不是展开讲解。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；从“为什么要区分正交对角化”进入，完整例子与协方差/二次型迁移都已补上。
 
 - `ch07 lesson-02`《SVD（奇异值分解）的结构与几何解释》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：直接给分解形式，仅有快速示例，且存在编码/排版异常。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；两套主轴的必要性、完整例子与图像压缩/推荐系统迁移都已补齐，原有编码异常已修复。
 
 - `ch07 lesson-03`《低秩近似与主成分分析（PCA）直觉》
-  - `Core ❌` `Architecture ❌` `Flow ❌` `Narrative ❌`
-  - 总判定：`明显偏离`
-  - 备注：直接上 `Eckart-Young` 结论，解释层太薄，也有异常字符污染。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；低秩近似、截断 SVD、PCA 与压缩/降噪/推荐系统迁移已经形成完整闭环。
 
 - `ch07 lesson-04`《全课程总收束——从方程到分解》
-  - `Core △` `Architecture △` `Flow △` `Narrative △`
-  - 总判定：`部分符合`
-  - 备注：总收束方向是对的，但更像复盘提要，不像完整展开讲解。
+  - `Core ✅` `Architecture ✅` `Flow ✅` `Narrative ✅`
+  - 总判定：`基本符合`
+  - 备注：已重写；现已把全课程压成“方程→空间→变换→分解→近似”的统一主线，不再是提要式复盘。
 
 ## 7. 代表性证据
 
-### 7.1 形式化抢跑
+### 7.1 当前主要的展开不足样本
 
-- `ch06-inner-product-and-least-squares/lesson-01-inner-product-norm-orthogonality.md`
-- `ch06-inner-product-and-least-squares/lesson-02-orthogonal-basis-and-gram-schmidt.md`
-- `ch07-spectral-and-svd-unification/lesson-01-spectral-theorem-for-symmetric-matrices.md`
+- 当前已无需要结构性重写的样本。
 
-### 7.2 完整例子缺失或弱化
+### 7.2 当前主要的应用与迁移偏弱样本
 
-- `ch06-inner-product-and-least-squares/lesson-04-qr-and-chapter-wrap.md`
-- `ch07-spectral-and-svd-unification/lesson-02-svd-structure-and-geometry.md`
-- `ch07-spectral-and-svd-unification/lesson-03-low-rank-approximation-and-pca-intuition.md`
+- 当前已无明显缺失应用与迁移部件的样本。
 
 ### 7.3 重复模板尾部
 
-- `ch01-linear-world-entry/lesson-01-additivity-and-vector-intuition.md`
-- `ch02-linear-systems-and-elimination/lesson-01-augmented-matrix-and-row-operation-invariance.md`
+- 已完成主要重复模板尾部清理。
+
+### 7.4 仍需清理的模板尾部样本
+
+- 当前仅剩可选精修，不再影响总判定。
 - `ch02-linear-systems-and-elimination/lesson-02-gaussian-elimination-and-echelon-form.md`
-
-### 7.4 编码与排版异常
-
-- `ch06-inner-product-and-least-squares/lesson-04-qr-and-chapter-wrap.md`
-- `ch07-spectral-and-svd-unification/lesson-02-svd-structure-and-geometry.md`
-- `ch07-spectral-and-svd-unification/lesson-03-low-rank-approximation-and-pca-intuition.md`
 
 ## 8. 优先返工顺序
 
-### 第一优先级：应优先重写
+### 第一优先级：已完成重写
 
 - `ch04 lesson-03`
 - `ch06 lesson-01`
@@ -277,21 +272,13 @@
 - `ch07 lesson-02`
 - `ch07 lesson-03`
 
-### 第二优先级：应做结构性扩写
+### 第二优先级：当前应做结构性扩写
 
-- `ch03 lesson-01`
-- `ch03 lesson-02`
-- `ch03 lesson-03`
-- `ch03 lesson-04`
-- `ch05 lesson-01`
-- `ch05 lesson-02`
-- `ch05 lesson-03`
-- `ch05 lesson-04`
+- 当前已无第二优先级结构性扩写任务。
 
 ### 第三优先级：应清理模板痕迹
 
-- `ch01 lesson-01`
-- `ch01 lesson-02`
+- 如需继续打磨，可做全课程统一语言风格微调。
 - `ch01 lesson-03`
 - `ch01 lesson-04`
 - `ch02 lesson-01`
@@ -302,7 +289,7 @@
 - 如果标准是“是否严格按 `SLS` 执行”，答案是：**没有**。
 - 如果细分来看：
   - `ch01-ch02`：可视为“接近 `SLS`，但有模板化瑕疵”
-  - `ch03-ch05`：可视为“保留外壳，但展开明显不足”
+  - `ch04`：仍可视为“保留外壳，但展开明显不足”
   - `ch06-ch07`：可视为“系统性偏离 `SLS` 完整单元形态”
 
 - 因此，后续返工不应只修补文案，而应按五层重新组织：
