@@ -144,6 +144,8 @@
 
 ## 完整例子第一部分：先把四个空间都算出来
 
+这里先说明一下：为了把四个基本子空间在同一张图里看清，这一课暂时选用一个更适合展示“输出受限、零空间非平凡、左右两侧都能看出结构”的工作矩阵。它是本章的局部工作例子，不替换前两章已经建立的课程主锚点；到本章收束时，我们还会回扣那个主锚点系统。
+
 取矩阵
 
 \[
@@ -319,28 +321,30 @@ y_1+2y_2=0.
 现在解释最关键的结构关系：
 
 \[
-\operatorname{Row}(A)=\mathcal N(A)^\perp \subseteq \mathbb R^n,
+\operatorname{Row}(A)\subseteq \mathcal N(A)^\perp \subseteq \mathbb R^n,
 \]
 \[
-\operatorname{Col}(A)=\mathcal N(A^T)^\perp \subseteq \mathbb R^m.
+\operatorname{Col}(A)\subseteq \mathcal N(A^T)^\perp \subseteq \mathbb R^m.
 \]
 
-先看第一组。若 \(x\in\mathcal N(A)\)，则 \(Ax=0\)。把 \(A\) 的每一行记为 \(r_i\)，这就等于每个 \(r_i\cdot x\) 都为零，所以 \(x\) 与所有行向量正交，也就与整块行空间正交。再结合维数关系，就得到
+先看第一组。若 \(x\in\mathcal N(A)\)，则 \(Ax=0\)。把 \(A\) 的每一行记为 \(r_i\)，这就等于每个 \(r_i\cdot x\) 都为零，所以 \(x\) 与所有行向量正交，也就与整块行空间正交。因此至少可以先得到
 
 \[
-\operatorname{Row}(A)=\mathcal N(A)^\perp.
+\operatorname{Row}(A)\subseteq \mathcal N(A)^\perp.
 \]
 
-第二组完全类似：若 \(y\in\mathcal N(A^T)\)，则 \(A^Ty=0\)，说明 \(y\) 与 \(A\) 的每一列都正交，因此
+第二组完全类似：若 \(y\in\mathcal N(A^T)\)，则 \(A^Ty=0\)，说明 \(y\) 与 \(A\) 的每一列都正交，因此至少先有
 
 \[
-\operatorname{Col}(A)=\mathcal N(A^T)^\perp.
+\operatorname{Col}(A)\subseteq \mathcal N(A^T)^\perp.
 \]
 
 你现在应该抓住的不是证明技巧，而是结构意义：
 
-- 输入侧：有效约束方向 与 被压掉方向 正交互补；
-- 输出侧：可达输出方向 与 不可达方向 正交互补。
+- 输入侧：有效约束方向 与 被压掉方向 至少先呈现出正交配对；
+- 输出侧：可达输出方向 与 不可达方向 至少先呈现出正交配对。
+
+到了下一课，我们再把这种“正交配对”进一步压成维数关系，并把这里的包含关系收紧成真正的正交互补等式。
 
 ## 完整例子第三部分：在这个例子里直接验证正交关系
 
