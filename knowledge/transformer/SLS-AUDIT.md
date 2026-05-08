@@ -153,8 +153,9 @@
 ## 7. 第一轮目标文件
 
 - `knowledge/transformer/README.md`
-- `knowledge/transformer/chapters/ch05-encoder-decoder-and-full-system/lesson-01-what-the-encoder-is-really-building.md`
-- `knowledge/transformer/chapters/ch05-encoder-decoder-and-full-system/lesson-02-what-the-decoder-is-doing-while-generating.md`
+- `knowledge/transformer/chapters/ch05-encoder-decoder-and-full-system/lesson-01-how-the-original-transformer-fits-together.md`
+- `knowledge/transformer/chapters/ch05-encoder-decoder-and-full-system/lesson-02-what-the-encoder-is-really-building.md`
+- `knowledge/transformer/chapters/ch05-encoder-decoder-and-full-system/lesson-03-what-the-decoder-is-doing-while-generating.md`
 - `knowledge/transformer/chapters/ch06-decoder-only-pretraining-and-generation/lesson-03-prompting-and-generation-as-conditional-continuation.md`
 - `knowledge/transformer/chapters/ch06-decoder-only-pretraining-and-generation/lesson-04-chapter-wrap-and-modern-llm-entry-lock-in.md`
 - `knowledge/transformer/chapters/ch07-strengths-limits-and-system-extensions/lesson-01-where-the-power-really-comes-from.md`

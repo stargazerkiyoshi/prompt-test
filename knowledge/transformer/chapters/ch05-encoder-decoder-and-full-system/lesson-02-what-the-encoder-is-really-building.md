@@ -1,10 +1,16 @@
-# 第 5 章 第 1 课：Encoder 真正在建立什么
+# 第 5 章 第 2 课：Encoder 真正在建立什么
+
+上一课里，我们先从整机层看清了：原始 Transformer 不是外围配件拼起来的临时结构，而是一台由很多 Encoder block 和很多 Decoder block 组成的完整机器。现在先聚焦它的输入侧。
 
 一说到 Encoder，很多人脑中会先冒出一句很快但很空的话：
 
 “Encoder 就是把输入编码一下。”
 
 这句话不能算错，但几乎没解释任何东西。因为“编码一下”到底是什么意思？是把整句压成一个向量吗？是给每个词打个标签吗？是把句子存进某种记忆里吗？如果这些问题不讲清楚，后面你很难理解为什么 Decoder 还要去读 Encoder 的输出。
+
+而且这里还要再排除一个常见误解：
+
+Encoder 不是 Transformer 外面后来挂上的配件。对原始论文里的 Transformer 来说，Encoder 本来就是整机内部的一大半结构。更准确地说，原始 Transformer 是“很多 Encoder block + 很多 Decoder block”拼起来的一整套系统。
 
 所以这一课要解决的问题是：
 

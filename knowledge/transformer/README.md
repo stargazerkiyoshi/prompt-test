@@ -4,6 +4,24 @@
 
 如果你是第一次进入这套内容，建议不要直接随机点开某一课，而是先从总纲开始，再按章节顺序推进。这样你能始终知道自己当前处在整条主线的哪个位置，也知道这一章为什么在这里出现。
 
+## 先把 Transformer 的层级位置说清楚
+
+这套内容里，“Transformer”这个词会在四个层级上出现，但它们不是同一件东西。
+
+1. `self-attention`：这是核心关系建模机制，回答“一个位置怎样按需读取别的位置”。
+2. `standard Transformer block`：这是标准结构单元，把位置编码、多头注意力、前馈网络、残差和层归一化组织成一个可堆叠的 block。
+3. `original Encoder-Decoder Transformer`：这是完整系统，用许多 block 组成 Encoder 和 Decoder，再通过 mask 与 cross-attention 接成翻译式信息流。
+4. `modern Decoder-only / LLM system`：这是后来的系统重组，保留 Transformer 的生成侧核心，再围绕预训练、生成和外部系统扩展成长。
+
+对应到课程顺序就是：
+
+- 第 3 章讲第 1 层：`self-attention` 发动机。
+- 第 4 章讲第 2 层：标准 `Transformer block`。
+- 第 5 章讲第 3 层：原始 `Encoder-Decoder Transformer` 完整系统。
+- 第 6、7 章讲第 4 层：现代 `LLM` 形态与更大系统。
+
+把这层定位先立住，后面就不容易把“attention”“block”“完整 Transformer”“今天的大模型”混成一团。
+
 ## 推荐阅读顺序
 
 1. [00-outline.md](00-outline.md)
